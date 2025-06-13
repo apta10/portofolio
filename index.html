@@ -3,10 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fian - Portofolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Fian - Web Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      padding: 20px 50px;
+      background-color: #121212;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #ffffffcc;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 100px;
+      min-height: calc(100vh - 80px);
+      background: radial-gradient(circle at left top, #1f1f1f, #0f0f0f);
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #bbbbbb;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .hero-text .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: white;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .hero-text .btn:hover {
+      background-color: #ffcb05;
+    }
+
+    .hero-image img {
+      width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 40px;
+      }
+
+      .hero-text, .hero-image {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 40px;
+      }
+
+      .hero-image img {
+        margin-top: 30px;
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <div class="logo">Fian</div>
     <nav>
@@ -16,12 +118,17 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <div class="container">
-    <h1>Halo, Saya Fian</h1>
-    <p>Saya adalah siswa kelas XI PGIM 11, jurusan Pengembangan Gim. Saya memiliki minat di bidang desain web dan pengembangan game.</p>
-    <a class="button" href="projects.html">Lihat Proyek Saya</a>
-    <br>
-    <img src="foto.png" alt="Foto Fian" class="profile" />
-  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Halo, Saya Fian<br>Web Designer & Siswa PGIM</h1>
+      <p>Saya adalah siswa kelas XI PGIM 11 jurusan Pengembangan Gim. Saya suka mendesain dan membangun website keren, bersih, dan responsif.</p>
+      <a href="projects.html" class="btn">Lihat Proyek Saya</a>
+    </div>
+    <div class="hero-image">
+      <img src="foto.png" alt="Foto Fian">
+    </div>
+  </section>
+
 </body>
 </html>
